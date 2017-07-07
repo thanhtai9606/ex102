@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.2.1.min.js"></script>  
+    <script>
+       const config ={ audio:false, video:true}
+            navigator.mediaDevices.getUserMedia(config)
+            .then(mediaSteam=>{
+                var video = document.getElementById("yourVideo");
+                video.srcObject = mediaSteam;
+                video.onloadedmetadata = (e)=>{
+                    video.play();
+                }
+            }).catch(err=>{
+                console.log(err);
+            })
+    </script>
+    <script src="bundle.js"></script>
+</head>
+<body>
+    <h1>Hello Video RTC Nodejs</h1>
+
+    <div class="container">
+        <h2 class="" id="your Id"><small>Empty</small></h2>
+        <div class="">
+            <video src="" id="yourVideo" width="300" class="" controls></video>
+        </div>
+        <div class="">
+            <video src=""  id="partnerVideo" width="300" class="" controls></video>
+        </div>
+
+        <div class="caller">
+            <input type="text" name="userId" placeholder="Input your ID">
+            <button type="button" id="btnCall">CallMe</button>
+        </div>
+    </div>
+
+</body>
+</html>

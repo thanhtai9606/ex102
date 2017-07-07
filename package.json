@@ -1,0 +1,27 @@
+{
+  "name": "ex102",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "prod": "webpack -p",
+    "dev" : "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhtai9606/ex102.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhtai9606/ex102/issues"
+  },
+  "homepage": "https://github.com/thanhtai9606/ex102#readme"
+}
